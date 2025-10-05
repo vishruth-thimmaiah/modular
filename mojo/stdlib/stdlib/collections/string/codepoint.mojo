@@ -293,6 +293,50 @@ struct Codepoint(
         """
         return self.to_u32() != other.to_u32()
 
+    fn __lt__(self, other: Self) -> Bool:
+        """Return True if this character has a smaller codepoint value than `other`.
+
+        Args:
+            other: The codepoint value to compare against.
+
+        Returns:
+            True if this character is strictly less than `other` and False otherwise.
+        """
+        return self.to_u32() < other.to_u32()
+
+    fn __le__(self, other: Self) -> Bool:
+        """Return True if this character has a smaller or equal codepoint value than `other`.
+
+        Args:
+            other: The codepoint value to compare against.
+
+        Returns:
+            True if this character is less than or equal to `other` and False otherwise.
+        """
+        return self.to_u32() <= other.to_u32()
+
+    fn __gt__(self, other: Self) -> Bool:
+        """Return True if this character has a greater codepoint value than `other`.
+
+        Args:
+            other: The codepoint value to compare against.
+
+        Returns:
+            True if this character is strictly greater than `other` and False otherwise.
+        """
+        return self.to_u32() > other.to_u32()
+
+    fn __ge__(self, other: Self) -> Bool:
+        """Return True if this character has a greater or equal codepoint value than `other`.
+
+        Args:
+            other: The codepoint value to compare against.
+
+        Returns:
+            True if this character is greater than or equal to `other` and False otherwise.
+        """
+        return self.to_u32() >= other.to_u32()
+
     # ===-------------------------------------------------------------------===#
     # Trait implementations
     # ===-------------------------------------------------------------------===#

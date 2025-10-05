@@ -54,6 +54,11 @@ def test_char_comparison():
     assert_equal(Codepoint(0), Codepoint(0))
     assert_not_equal(Codepoint(0), Codepoint(1))
 
+    assert_true(Codepoint(0) < Codepoint(1))
+    assert_true(Codepoint(0) <= Codepoint(1))
+    assert_false(Codepoint(0) > Codepoint(1))
+    assert_false(Codepoint(0) >= Codepoint(1))
+
 
 def test_char_formatting():
     assert_equal(String(Codepoint(0)), "\0")
